@@ -1,0 +1,52 @@
+{
+  "hash": "d4e322d4",
+  "configHash": "a163f8d3",
+  "lockfileHash": "e1a85cfc",
+  "browserHash": "81d095e8",
+  "optimized": {
+    "@angular/core": {
+      "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "cff32a48",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "90b94577",
+      "needsInterop": false
+    },
+    "canvas-confetti": {
+      "src": "../../../../../node_modules/canvas-confetti/dist/confetti.module.mjs",
+      "file": "canvas-confetti.js",
+      "fileHash": "cafc8380",
+      "needsInterop": false
+    },
+    "gsap": {
+      "src": "../../../../../node_modules/gsap/index.js",
+      "file": "gsap.js",
+      "fileHash": "9f3057f0",
+      "needsInterop": false
+    },
+    "gsap/ScrollTrigger": {
+      "src": "../../../../../node_modules/gsap/ScrollTrigger.js",
+      "file": "gsap_ScrollTrigger.js",
+      "fileHash": "7b06ea0d",
+      "needsInterop": false
+    },
+    "three": {
+      "src": "../../../../../node_modules/three/build/three.module.js",
+      "file": "three.js",
+      "fileHash": "4299726d",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-TPDIIF7U": {
+      "file": "chunk-TPDIIF7U.js"
+    },
+    "chunk-WDMUDEB6": {
+      "file": "chunk-WDMUDEB6.js"
+    }
+  }
+}

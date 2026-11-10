@@ -1,0 +1,77 @@
+
+
+.hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    align-items: flex-end;
+    padding: 8rem clamp(1.25rem, 6vw, 6rem) 4rem;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+}
+
+.hero-3d {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: .9
+}
+
+.shape {
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    display: block;
+    touch-action: manipulation
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 3;
+    pointer-events: none;
+
+    a,
+    button {
+        pointer-events: auto
+    }
+}
+
+.tagline {
+    font-size: clamp(1.5rem, 3.6vw, 2rem);
+    margin: 1rem 0
+}
+
+
+.sub {
+    max-width: 34rem;
+    margin-bottom: 2rem;
+    color: var(--rose)
+}
+
+
+.name {
+    font-size: clamp(3.5rem, 7vw, 12rem);
+
+    .line {
+        display: block;
+        overflow: hidden;
+        padding-bottom: .1em
+    }
+
+    .ch {
+        display: inline-block;
+        pointer-events: auto
+    }
+}
+
+
+.eyebrow {
+  font: 1rem var(--mono);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 1rem;
+  font-weight: 800;
+}

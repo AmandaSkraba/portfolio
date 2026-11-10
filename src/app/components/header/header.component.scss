@@ -1,0 +1,33 @@
+.hdr {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem clamp(1.25rem, 6vw, 6rem);
+    mix-blend-mode: multiply;
+    background-color: var(--bg);
+
+   
+    .logo {
+        font: 300 1.8rem var(--syne);
+        text-decoration: none;
+
+        span {
+            color: var(--terra)
+        }
+    }
+
+    nav {
+        display: flex;
+        gap: clamp(.8rem, 3vw, 2rem)
+        
+    }
+
+    nav a {
+        text-decoration: none;
+        font-size: .9rem;
+        display: inline-block;

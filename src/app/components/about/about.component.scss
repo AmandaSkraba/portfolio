@@ -1,0 +1,66 @@
+.sec {
+    padding: clamp(5rem, 12vw, 8rem) clamp(1.25rem, 6vw, 6rem);
+    position: relative;
+
+    img {
+        position: relative;
+    }
+}
+
+.shape {
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    display: block;
+    touch-action: manipulation
+}
+
+
+h2 {
+    font-size: clamp(56px, 13vw, 113px);
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 1px;
+    /* Espessura da borda */
+    -webkit-text-stroke-color: var(--olive);
+    /* Cor da borda */
+    color: transparent;
+    position: relative;
+    top: -10px;
+}
+
+h3 {
+    font-size: clamp(42px, 13vw, 60px);
+    text-transform: uppercase;
+    color: var(--terra);
+}
+
+.badge {
+    padding: 10px 25px;
+    color: var(--white);
+    background-color: var(--sage);
+    border-radius: 50px;
+    position: relative;
+    top: -1.8rem;
+    // right: -15rem;
+    opacity: 95%;
+}
+
+.metric-card {
+    // padding: clamp(0vh, .5vh, 1vh) clamp(0.5vw, 1vw, 1.5vw);
+    // border: 1px solid var(--olive);
+    // border-radius: 10px;
+    // width: 100px;
+
+    p {
+        border: 1px solid var(--olive);
+        border-radius: 50px;
+        font-size: 33px;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--olive);
+        color: var(--white);
+    }
+}

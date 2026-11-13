@@ -1,0 +1,28 @@
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background: #efefef;
+  padding: 18px 0;
+
+  .rail {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    gap: 55px;
+
+    h4 {
+      flex-shrink: 0;
+      white-space: nowrap;
+      margin: 0;
+      font-size: 24px;
+      font-weight: 500;
+      color: #494e41;
+    }
+
+    span {
+      flex-shrink: 0;
+      color: #92716a;
+      font-size: 20px;
+    }
+  }
+}

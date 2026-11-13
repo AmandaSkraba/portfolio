@@ -1,14 +1,15 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy } from '@angular/core';
 import { gsap } from 'gsap';
-import { FxService, MagneticDirective, PALETTE, ScrambleDirective } from '../../core/fx.service';
+import { FxService, MagneticDirective, PALETTE, ScrambleDirective, TextDirective } from '../../core/fx.service';
 import { PROFILE } from '../../core/data';
 import { InteractiveShapeComponent } from '../interactive-shape.component';
 import { ThreeSceneComponent } from '../three-scene.component';
+import { MemojiComponent } from '../memoji/memoji.component';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [InteractiveShapeComponent, ThreeSceneComponent, MagneticDirective, ScrambleDirective],
+  imports: [InteractiveShapeComponent, ThreeSceneComponent, MagneticDirective, ScrambleDirective, TextDirective, MemojiComponent],
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.scss']
 })
@@ -23,11 +24,15 @@ export class HeroComponent implements AfterViewInit, OnDestroy {
     { x: 93, y: 33, size: 26, kind: 'star' as const, clickKind: 'morph' as const, c: 2, m: false, d: 3 },
   ];
 
+  memojis = [
+    { x: 26, y: 25, size: 150},
+    { x: 80, y: 35, size: 150 },
+    { x: 72, y: 82, size: 150 },
+    { x: 15, y: 80, size: 150 }
+  ];
+
   constructor(private h: ElementRef<HTMLElement>, private fx: FxService) { }
 
-  wiggle(e: Event) {
-    if (!this.fx.reduced) gsap.to(e.target, { y: -14, duration: .25, yoyo: true, repeat: 1, ease: 'power2.out', overwrite: 'auto' });
-  }
 
   ngAfterViewInit() {
     if (this.fx.reduced) return;

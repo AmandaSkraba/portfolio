@@ -1,0 +1,14 @@
+<section #section class="skills" id="habilidades">
+    <!-- <p class="label">com o que eu construo</p> -->
+
+    @for (skill of skills; track skill.name) {
+    <div class="row" [style.--c]="skill.color">
+        <div class="track">
+            @for (r of repeat; track $index) {
+            <span class="word" [class.filled]="skill.filled">{{ skill.name }}</span>
+            <i class="star" aria-hidden="true">✦</i>
+            }
+        </div>
+    </div>
+    }
+</section>

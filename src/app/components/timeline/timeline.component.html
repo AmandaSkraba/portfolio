@@ -1,0 +1,41 @@
+<section #section class="timeline-section fade" id="trajectory">
+
+    <div class="timeline-header mb-0">
+        <span class="eyebrow">MINHA JORNADA</span>
+        <h2 class="cl-sage">Uma trajetória em <span class="cl-terra">movimento.</span></h2>
+        <p>Do primeiro código às experiências que construí até aqui.</p>
+    </div>
+
+    <div #viewport class="timeline-viewport">
+
+        <div #track class="timeline-track">
+
+            @for (item of experiences; track item.year) {
+            <article class="timeline-card">
+
+                <span class="timeline-year">{{ item.year }}</span>
+
+                <div class="timeline-marker"></div>
+
+                <div class="timeline-card-content">
+                    <span class="timeline-category">
+                        {{ item.category }}
+                    </span>
+
+                    <h3>{{ item.title }}</h3>
+
+                    <p>{{ item.description }}</p>
+
+                    <div class="timeline-tags">
+                        @for (tech of item.technologies; track tech) {
+                        <span>{{ tech }}</span>
+                        }
+                    </div>
+                </div>
+
+            </article>
+            }
+
+        </div>
+    </div>
+</section>

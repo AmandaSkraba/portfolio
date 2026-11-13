@@ -1,0 +1,8 @@
+<section class="marquee" #marquee>
+    <div class="rail">
+        <ng-container *ngFor="let item of marqueeLoop">
+            <h4>{{ item.text }}</h4>
+            <span>✦</span>
+        </ng-container>
+    </div>
+</section>

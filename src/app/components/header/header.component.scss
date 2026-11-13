@@ -9,7 +9,7 @@
     align-items: center;
     padding: 1.2rem clamp(1.25rem, 6vw, 6rem);
     mix-blend-mode: multiply;
-    background-color: var(--bg);
+    background-color: var(--white);
 
    
     .logo {
@@ -31,3 +31,6 @@
         text-decoration: none;
         font-size: .9rem;
         display: inline-block;
+        min-width: 4ch
+    }
+}

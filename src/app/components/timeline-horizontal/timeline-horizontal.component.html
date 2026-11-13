@@ -1,0 +1,25 @@
+<section #section class="hz" id="trajetoria">
+    <div #track class="track">
+        <div class="panel intro">
+            <div>
+                <p class="text-uppercase cl-terra fw-bold">Empresas</p>
+
+                <h2>POR ONDE<br />EU PASSEI</h2>
+                <p>role para o lado</p>
+            </div>
+        </div>
+
+        @for (job of jobs; track job.company) {
+        <article class="panel" [style.--c]="job.color">
+            <span class="year">{{ job.year }}</span>
+            <div class="txt">
+                <h3>{{ job.role }}</h3>
+                <p class="company">{{ job.cargo }} na {{ job.company }}</p>
+                <small>{{ job.stack }}</small>
+            </div>
+        </article>
+        }
+    </div>
+
+    <div class="bar"><i class="bar-fill"></i></div>
+</section>

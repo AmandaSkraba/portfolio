@@ -1,11 +1,9 @@
-
-
 .hero {
     position: relative;
     min-height: 100svh;
     display: flex;
     align-items: flex-end;
-    padding: 8rem clamp(1.25rem, 6vw, 6rem) 4rem;
+    padding: 8rem clamp(1.25rem, 6vw, 6rem) 8rem;
     overflow: hidden;
     text-align: center;
     justify-content: center;
@@ -52,7 +50,8 @@
 
 
 .name {
-    font-size: clamp(3.5rem, 7vw, 12rem);
+    font-size: clamp(3.5rem, 10vw, 12rem);
+    text-transform: uppercase;
 
     .line {
         display: block;
@@ -68,10 +67,27 @@
 
 
 .eyebrow {
-  font: 1rem var(--mono);
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--rose);
-  margin-bottom: 1rem;
-  font-weight: 800;
+    font: 1rem var(--mono);
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--rose);
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.name {
+    opacity: 1;
+}
+
+.word {
+    display: inline-block;
+}
+
+.non-select {
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
 }

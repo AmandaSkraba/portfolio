@@ -9,23 +9,37 @@
 
 @import "bootstrap/scss/utilities";
 @import "bootstrap/scss/utilities/api";
-
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  --sand: #cfbeac;
-  --rose: #936e67;
-  --terra: #b6846b;
-  --olive: #464c3f;
-  --sage: #8c9487;
-  --wine: #5c3227;
-  --paper: #f4ede3;
-  --white: #ffffff;
-  --serif: 'Fraunces', serif;
-  --mono: 'JetBrains Mono', monospace;
-  --syne: 'Syne', sans-serif;
-  --text: #6b635e;
+  --bg: #FAF8F5;
+  --bg-2: #F5F5F5;
+  --gray-1: #EDEDED;
+  --gray-2: #C3C3C3;
+  --text: #6B6B63;
+
+  --terra: #B5836A;
+  --sage: #8B9386;
+  --olive: #474C40;
+  --rose: #92716A;
+  --white: #FAFCFB;
+  --black: #1E1E1E;
+
+  //tipografias
+  --bagel: "Bagel Fat One", system-ui;
+  --bricolage: 'Bricolage Grotesque', sans-serif;
+  --jetbrains: 'JetBrains Mono', monospace;
 }
 
+.font-bagel{
+  font-family: var(--bagel)!important;
+}
+.font-bricolage{
+  font-family: var(--bricolage)!important;
+}
+.font-jetbrains{
+  font-family: var(--jetbrains) !important;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -37,7 +51,7 @@ html {
 }
 
 body {
-  background: var(--white);
+  background: var(--bg);
   color: var(--text);
   font: 400 1.05rem/1.65 'DM Sans', sans-serif;
   overflow-x: hidden
@@ -57,7 +71,7 @@ h1,
 h2,
 h3 {
   font-size: 80px;
-  font-family: Syne, sans-serif;
+  font-family: var(--bagel);
   font-weight: 300;
   line-height: 1.02;
   letter-spacing: -.02em;
@@ -73,6 +87,13 @@ a,
 button {
   color: inherit;
   font: inherit
+}
+
+section>p:first-child {
+  font-family: var(--jetbrains) !important;
+  text-transform: uppercase !important;
+  color: var(--terra) !important;
+  font-weight: bold;
 }
 
 :focus-visible {
@@ -95,10 +116,6 @@ button {
   }
 }
 
-.sec {
-  padding: clamp(5rem, 12vw, 10rem) clamp(1.25rem, 6vw, 6rem);
-  position: relative
-}
 
 .big {
   font-size: clamp(2.4rem, 7vw, 6rem);
@@ -125,7 +142,7 @@ button {
   &:hover,
   &.primary {
     background: var(--olive);
-    color: var(--paper)
+    color: var(--white);
   }
 
   &.primary:hover {
@@ -509,9 +526,11 @@ button {
 .cl-terra {
   color: var(--terra) !important;
 }
-.cl-sage{
-    color: var(--sage) !important;
+
+.cl-sage {
+  color: var(--sage) !important;
 }
-.cl-wine{
-    color: var(--wine) !important;
+
+.cl-rose {
+  color: var(--rose) !important;
 }

@@ -1,24 +1,33 @@
 <section class="hero col-12 text-center" id="top">
+
+    <!-- Shapes -->
     @for (s of shapes; track $index) {
     <app-shape [x]="s.x" [y]="s.y" [size]="s.size" [kind]="s.kind" [color]="pal[s.c]" [magnetic]="s.m" [depth]="s.d"
         [clickKind]="s.clickKind" [originalKind]="s.kind" />
     }
-    <div class="col-8 hero-copy text-center">
-        <p class="eyebrow fade">Desenvolvedora Full Stack</p>
-        <h1 class="name">
-            Criando, testando
-            e <span class="cl-terra">evoluindo...</span>
-        </h1>
 
-        <h2 class="tagline fade subtitle">— Uma linha de código por vez.</h2>
-        <div class="col-12 text-center d-flex justify-content-center">
-            <p class="sub fade text-center">Desenvolvedora Full Stack apaixonada por tecnologia, interfaces bem
-                construídas e soluções
-                que fazem sentido.</p>
+    <!-- Memojis -->
+    @for (m of memojis; track $index) {
+    <app-memoji class="fade" [x]="m.x" [y]="m.y" [size]="m.size" />
+    }
+
+    <div class="col-8 hero-copy text-center">
+
+        <div appText class="non-select mb-5">
+            <p class="eyebrow fade">Desenvolvedora Full Stack</p>
+
+            <h1 class="name cl-terra">
+                Amanda
+                <span class="cl-sage" style="position: relative; top: -25px;">Skraba<span
+                        class="cl-rose">.</span></span>
+
+            </h1>
         </div>
-        <div class="cta fade">
+
+        <div class="cta fade non-select">
             <a class="btn primary" href="#projects">Explorar projetos</a>
-            <a class="btn" href="#contact"> Entrar em contato</a>
+            <a class="btn" href="#contact">Entrar em contato</a>
         </div>
+
     </div>
 </section>

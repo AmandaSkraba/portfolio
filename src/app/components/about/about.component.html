@@ -1,0 +1,40 @@
+<section class="sec about text-center d-flex flex-column align-items-center" id="about">
+    <p class="mb-4 font-jetbrains text-uppercase">Sobre mim</p>
+    <h3>Na minha máquina</h3>
+    <h2>Funciona</h2>
+    <div class="badge ">
+        <span class="font-jetbrains">e na sua também!</span>
+    </div>
+
+    <p class="col-8">Tenho 22 anos, 5 de experiência e uma regra:
+        <br><b class="text-uppercase">se funciona só no meu computador, não está pronto.</b><br>
+        Sou casada, mãe e dev .NET e Angular, e levo para o código o mesmo cuidado de casa: organização e atenção ao que
+        importa. Já atuei em mais de 7 projetos para diferentes empresas, apoiei 3 equipes e gosto de deixar sistema
+        legado mais estável, interface mais agradável e documentação que ajuda a próxima pessoa.
+    </p>
+
+    <div class="col-8 mt-5 mb-3 d-flex align-items-center align-content-center justify-content-between">
+        <div class="col-4 metric-card d-flex flex-column align-items-center justify-content-between "
+            *ngFor="let badge of badges">
+            <p class="font-bagel">
+                {{badge.lbl1}}
+            </p>
+            <small class="font-jetbrains">{{badge.lbl2}}</small>
+        </div>
+    </div>
+
+    <a href="../../../assets/docs/Currículo Amanda Skraba.pdf" download
+        class="mt-4 text-uppercase font-jetbrains text-decoration-none">
+        <fa-icon [icon]="faDownload"></fa-icon> Baixar Currículo
+    </a>
+
+
+    @for (m of images; track $index) {
+    <app-memoji class="fade" [x]="m.x" [y]="m.y" [size]="m.size" [clicked]="false" [img]="m.src"
+        [rotation]="m.rotation" />
+    }
+    @for (s of shapes; track $index) {
+    <app-shape [x]="s.x" [y]="s.y" [size]="s.size" [kind]="s.kind" [color]="pal[s.c]" [magnetic]="s.m" [depth]="s.d"
+        [clickKind]="s.clickKind" [originalKind]="s.kind" />
+    }
+</section>

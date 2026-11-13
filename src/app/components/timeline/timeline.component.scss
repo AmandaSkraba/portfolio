@@ -1,0 +1,133 @@
+:host {
+    display: block;
+}
+
+.timeline-section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    // background: #cfbeac;
+    color: #464c3f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    padding: 3vh 0 50px;
+}
+
+.timeline-header {
+    padding: 0 8vw;
+    margin-bottom: 90px;
+
+    .eyebrow {
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        color: var(--wine);
+    }
+
+    h2 {
+        font-size: clamp(2.5rem, 6vw, 3rem);
+        font-weight: 500;
+        margin: 20px 0;
+
+        span {
+            color: var(--wine);
+            font-style: italic;
+        }
+    }
+
+    p {
+        color: #6e7568;
+    }
+}
+
+.timeline-viewport {
+    width: 100%;
+    overflow: hidden;
+}
+
+.timeline-track {
+    display: flex;
+    align-items: flex-start;
+    width: max-content;
+    padding: 0 8vw;
+    gap: 8vw;
+    will-change: transform;
+}
+
+.timeline-card {
+    position: relative;
+    width: clamp(280px, 35vw, 480px);
+    flex-shrink: 0;
+    padding-top: 35px;
+}
+
+.timeline-year {
+    display: block;
+    font-size: clamp(3rem, 6vw, 3rem);
+    font-weight: 500;
+   color: var(--wine);
+    margin-bottom: 10px;
+}
+
+.timeline-marker {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #464c3f;
+    position: relative;
+    margin-bottom: 10px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: calc(100% + 8vw);
+        height: 1px;
+        background: #8c9487;
+        left: 14px;
+        top: 50%;
+    }
+}
+
+.timeline-card-content {
+    .timeline-category {
+        font-size: 10px;
+        letter-spacing: 0.15em;
+        color: #936e67;
+    }
+
+    h3 {
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        font-weight: 500;
+        margin: 15px 0;
+    }
+
+    p {
+        max-width: 380px;
+        line-height: 1.8;
+        color: #626a5d;
+    }
+}
+
+.timeline-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 25px;
+
+    span {
+        border: 1px solid #8c9487;
+        border-radius: 30px;
+        padding: 7px 13px;
+        font-size: 11px;
+    }
+}
+
+.timeline-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 8vw 0;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: #6e7568;
+}

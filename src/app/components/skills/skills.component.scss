@@ -1,0 +1,66 @@
+:host {
+    display: block;
+}
+
+.skills {
+    position: relative;
+    padding: 14vh 0;
+    overflow: hidden; // as faixas passam da tela, então cortamos aqui
+    background: #f5f5f5;
+}
+
+.label {
+    padding: 0 5vw 5vh;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: #a07f7a;
+}
+
+.row {
+  white-space: nowrap;
+//   overflow: hidden;
+  line-height: 0.8; // novo
+}
+
+.track {
+    display: inline-block;
+    will-change: transform;
+}
+
+.word {
+    font-family: 'Bagel Fat One', system-ui, sans-serif;
+    font-size: clamp(70px, 15vw, 140px);
+    line-height: 0.68;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--c);
+    text-transform: uppercase;
+    margin-right: 0.25em;
+    cursor: default;
+    transition: color 0.3s;
+
+    &.filled {
+        color: var(--c);
+    }
+
+    &:hover {
+        color: var(--c); // o contorno enche de cor ao passar o mouse
+    }
+}
+
+.star {
+    font-style: normal;
+    font-family: 'Bagel Fat One', system-ui, sans-serif;
+    font-size: clamp(40px, 8vw, 44px);
+    color: #a07f7a;
+    margin-right: 0.25em;
+    vertical-align: middle;
+}
+
+// esferas "de argila"
+.ball {
+    position: absolute;
+    z-index: 3;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: inset -10px -12px 0 rgba(0, 0, 0, 0.14);
+}

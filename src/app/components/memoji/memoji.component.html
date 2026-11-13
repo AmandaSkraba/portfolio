@@ -1,0 +1,14 @@
+<button
+  class="memoji-button"
+  (click)="clicked ? changeExpression() : null"
+  [style.cursor]="clicked ? 'pointer' : 'default'"
+>
+  <img
+    #memoji
+    [src]="imagePath"
+    [style.width.px]="size"
+    [style.height.px]="size"
+    [style.transform]="'rotate(' + rotation + 'deg)'"
+    alt="Meu Memoji"
+  />
+</button>
